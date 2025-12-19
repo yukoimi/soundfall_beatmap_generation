@@ -45,8 +45,8 @@ def generate_beat_labels():
         with open(output_txt_path, 'w', encoding='utf-8') as f:
             while current_time <= duration:
                 count += 1
-                
-                line = f"{current_time:.6f}\t{current_time:.6f}\n"
+                label_text = f"{count:02d}标签"
+                line = f"{current_time:.6f}\t{current_time:.6f}\t{label_text}\n"
                 f.write(line)
                 
                 current_time += beat_interval
